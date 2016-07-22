@@ -39,4 +39,4 @@
     >>> conv_ak('Examples002', num_cnv_flag=True)
     'イー（大文字）・エクス・エイ・エム・ピー・エル・イー・エス・ゼロ・ゼロ・ニイ'
 """
-from a2pcej import *
+from .a2pcej import *
