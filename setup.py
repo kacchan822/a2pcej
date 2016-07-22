@@ -20,7 +20,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name = 'a2pcej',
-    version = '0.1.0a1',
+    version = '0.1.0a2',
     description = 'a2pcej, "convert Alphabet to Phonetic Code in English \
                         and Japanease."',
     long_description = long_description,
