@@ -7,14 +7,14 @@ and also convert each alphabet letterts to katakana.
 
 
 ### Functions
-#### conv_al(letters, delimiter='-', upper_sign='(CAPS)', num_cnv_flag=False)
+#### conv_al(letters, delimiter='-', upper_sign='(CAPS)', num=False)
 letters is string.
 
 ```python
 def conv_al(letters, delimiter='-', sign='(CAPS)', num=False):
     return <unicode>
 ```
-#### conv_ak(letters, delimiter='・', upper_sign='（大文字）', num_cnv_flag=False)
+#### conv_ak(letters, delimiter='・', upper_sign='（大文字）', num=False)
 letters is string.
 ```python
 def conv_ak(letters, delimiter='・', sign='（大文字）', num=False):
