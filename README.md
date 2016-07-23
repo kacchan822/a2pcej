@@ -5,24 +5,23 @@ __a2pcej__, convert Alphabet to Phonetic Code in English and Japanease.
 This module convert each alphabet letters to phonetic code,
 and also convert each alphabet letterts to katakana.
 
-__IMPORTANT:__ In current version, supported with Python 3.x, because of Japanese Encoding issue.
 
 ### Functions
 #### conv_al(letters, delimiter='-', upper_sign='(CAPS)', num_cnv_flag=False)
 letters is string.
 
 ```python
-def conv_al(letters, delimiter='-', upper_sign='(CAPS)', num_cnv_flag=False):
-    return _converter('alphabet_en', letters, delimiter, upper_sign, num_cnv_flag)
+def conv_al(letters, delimiter='-', sign='(CAPS)', num=False):
+    return <unicode>
 ```
 #### conv_ak(letters, delimiter='・', upper_sign='（大文字）', num_cnv_flag=False)
 letters is string.
 ```python
-def conv_ak(letters, delimiter='・', upper_sign='（大文字）', num_cnv_flag=False):
-    return _converter('alphabet_kana', letters, delimiter, upper_sign, num_cnv_flag)
+def conv_ak(letters, delimiter='・', sign='（大文字）', num=False):
+    return <unicode>
 ```
 
-### Simple example of usage as below...
+### Simple example of usage as below... (on Python3.5)
 First of all, import module.
 ```python
 Import module.
@@ -31,7 +30,7 @@ Import module.
 Convert 'exsamples' to Ponetic code in English.
 ```python
 >>> conv_al('examples')
-'ECHO, X―RAY, ALFA, MIKE, PAPA, LIMA, ECHO, SIERRA,'
+'Echo-Xray-Alfa-Mike-Papa-Lima-Echo-Sierra'
 ```
 
 Convert 'exsamples' to Ponetic code in Japanese Katakana.
@@ -51,16 +50,16 @@ Upper case lattters has (CAPS) or (大文字) sign (default).
 
 You can change delimiter and Upper case letters sign.
 ```python
->>> conv_al('Examples003', delimiter='//', upper_sign='(CAPITAL)')
-'Echo(CAPITAL)//Xray//Alfa//Mike//Papa//Lima//Echo//Sierra//0//0//3/'
->>> conv_ak('Examples003', delimiter='//', upper_sign='(CAPITAL)')
-'イー(CAPITAL)//エクス//エイ//エム//ピー//エル//イー//エス//0//0//3/'
+>>> conv_al('Examples003', delimiter=', ', sign='(CAPITAL)')
+'Echo(CAPITAL), Xray, Alfa, Mike, Papa, Lima, Echo, Sierra, 0, 0, 3,'
+>>> conv_ak('Examples003', delimiter='／', sign='(大)')
+'イー(大)／エクス／エイ／エム／ピー／エル／イー／エス／0／0／3'
 ```
 
-If you would like to convert numbers to phonetic code, set `num_cnv_flag=True`.
+If you would like to convert numbers to phonetic code, set `num=True`.
 ```python
->>> conv_al('Examples002', num_cnv_flag=True)
-'Echo(CAPS)-Xray-Alfa-Mike-Papa-Lima-Echo-Sierra-zero-zero-two'
->>> conv_ak('Examples002', num_cnv_flag=True)
-'イー（大文字）・エクス・エイ・エム・ピー・エル・イー・エス・ゼロ・ゼロ・ニイ'
+>>> conv_al('Examples004', num=True)
+'Echo(CAPS)-Xray-Alfa-Mike-Papa-Lima-Echo-Sierra-zero-zero-four'
+>>> conv_ak('Examples004', num=True)
+'イー（大文字）・エクス・エイ・エム・ピー・エル・イー・エス・ゼロ・ゼロ・ヨン'
 ```

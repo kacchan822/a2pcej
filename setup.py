@@ -20,9 +20,9 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name = 'a2pcej',
-    version = '0.1.0a2',
-    description = 'a2pcej, "convert Alphabet to Phonetic Code in English \
-                        and Japanease."',
+    version = '0.2.0a1',
+    description = '''a2pcej, "convert Alphabet to Phonetic Code in English
+                    and Japanease."''',
     long_description = long_description,
     url = 'https://github.com/kacchan822/a2pcej',
     author = 'Katsuya SAITO',
@@ -38,11 +38,11 @@ setup(
                     'Natural Language :: Japanese',
                     'Natural Language :: English',
                     'Operating System :: POSIX',
+                    'Programming Language :: Python',
+                    'Programming Language :: Python :: 2',
+                    'Programming Language :: Python :: 2.7',
                     'Programming Language :: Python :: 3',
-                    'Programming Language :: Python :: 3.3',
-                    'Programming Language :: Python :: 3.4',
                     'Programming Language :: Python :: 3.5',
-                    'Programming Language :: Python :: 3 :: Only',
                     'Topic :: Software Development',
                     'Topic :: Text Processing',
                     'Topic :: Utilities',
