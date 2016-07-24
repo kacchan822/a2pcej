@@ -20,7 +20,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name = 'a2pcej',
-    version = '0.2.0a1',
+    version = '0.2.1a1',
     description = '''a2pcej, "convert Alphabet to Phonetic Code in English
                     and Japanease."''',
     long_description = long_description,
@@ -48,6 +48,10 @@ setup(
                     'Topic :: Utilities',
                     ],
     keywords = 'alphabet, katakana, phonetic code',
-    packages = find_packages(exclude=['tests',]),
+    packages = find_packages(exclude=['tests', ]),
     install_requires = [],
-)
+    entry_points={
+                    'console_scripts': ['a2pcej=a2pcej:main',
+                                        ],
+                },
+    )
