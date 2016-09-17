@@ -10,18 +10,18 @@ def _converter(phonetics, letters, delimiter, sign, num):
         letters = letters.decode('utf-8')
     phonetic_dict = A2pcej.phonetics[phonetics]
     phonetic_num_dict = A2pcej.phonetics['number_' + phonetics.split('_')[1]]
-    converted_letters = ''
+    converted_letters = []
     for i in list(letters):
         if i.upper() in phonetic_dict.keys():
-            converted_letters += phonetic_dict[i.upper()]
+            i_phonetic = phonetic_dict[i.upper()]
             if i.isupper():
-                converted_letters += sign
+                i_phonetic += sign
+            converted_letters.append(i_phonetic)
         elif (i.isdigit() and num):
-            converted_letters += phonetic_num_dict[i]
+            converted_letters.append(phonetic_num_dict[i])
         else:
-            converted_letters += i
-        converted_letters += delimiter
-    return converted_letters[:-1]
+            converted_letters.append(i)
+    return delimiter.join(converted_letters)
 
 
 def conv_al(letters, delimiter='-', sign='(CAPS)', num=False):
