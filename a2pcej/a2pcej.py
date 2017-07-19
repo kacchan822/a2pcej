@@ -29,4 +29,4 @@ def conv_al(letters, delimiter='-', sign='(CAPS)', num=False):
 
 
 def conv_ak(letters, delimiter='・', sign='（大文字）', num=False):
-    return _converter('alphabet_kana', letters, delimiter, sign, num)
+    return _converter('alphabet_ja', letters, delimiter, sign, num)
