@@ -1,0 +1,15 @@
+engines:
+  rubocop:
+    enabled: true
+  pep8:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+        python:
+          mass_threshold: 100
+          python_version: 3
+ratings:
+  paths:
+  - "**.py"
