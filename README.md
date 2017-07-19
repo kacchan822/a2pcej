@@ -1,5 +1,9 @@
 a2pcej
 ======
+[![Code Climate](https://codeclimate.com/github/kacchan822/a2pcej/badges/gpa.svg)](https://codeclimate.com/github/kacchan822/a2pcej)
+[![Issue Count](https://codeclimate.com/github/kacchan822/a2pcej/badges/issue_count.svg)](https://codeclimate.com/github/kacchan822/a2pcej)
+
+
 __a2pcej__, convert Alphabet to Phonetic Code in English and Japanease.
 
 This module convert each alphabet letters to phonetic code,
