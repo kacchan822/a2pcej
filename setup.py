@@ -19,16 +19,16 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name = 'a2pcej',
-    version = '0.2.2a2',
-    description = '''a2pcej, "convert Alphabet to Phonetic Code in English
-                    and Japanease."''',
-    long_description = long_description,
-    url = 'https://github.com/kacchan822/a2pcej',
-    author = 'Katsuya SAITO',
-    author_email = 'hellow@hellow.skatsuya.com',
-    license = 'MIT',
-    classifiers = [
+    name='a2pcej',
+    version='0.2.2a2',
+    description='''a2pcej, "convert Alphabet to Phonetic Code in English
+                   and Japanease."''',
+    long_description=long_description,
+    url='https://github.com/kacchan822/a2pcej',
+    author='Katsuya SAITO',
+    author_email='hellow@hellow.skatsuya.com',
+    license='MIT',
+    classifiers=[
                     'Development Status :: 3 - Alpha',
                     'Environment :: Console',
                     'Intended Audience :: Developers',
@@ -47,9 +47,9 @@ setup(
                     'Topic :: Text Processing',
                     'Topic :: Utilities',
                     ],
-    keywords = 'alphabet, katakana, phonetic code',
-    packages = find_packages(exclude=['tests', ]),
-    install_requires = [],
+    keywords='alphabet, katakana, phonetic code',
+    packages=find_packages(exclude=['tests', ]),
+    install_requires=[],
     entry_points={
                     'console_scripts': ['a2pcej=a2pcej:main',
                                         ],

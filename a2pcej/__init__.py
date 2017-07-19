@@ -30,7 +30,7 @@ def main():
     else:
         cmd = conv_ak
 
-    if args.delimiter == None and not args.nodelimiter:
+    if args.delimiter is None and not args.nodelimiter:
         if args.mode == 'en':
             delimiter = '-'
         else:
@@ -40,7 +40,7 @@ def main():
     else:
         delimiter = args.delimiter
 
-    if args.sign == None and not args.nosign:
+    if args.sign is None and not args.nosign:
         if args.mode == 'en':
             sign = '(CAPS)'
         else:

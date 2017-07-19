@@ -4,17 +4,17 @@ from __future__ import unicode_literals
 
 
 def make_alphabet_dict(p_list):
-    return {chr(65 + k): v for k,v in enumerate(p_list) if k < 25}
+    return {chr(65 + k): v for k, v in enumerate(p_list) if k < 25}
 
 
 def make_num_dict(p_list):
-    return {str(k): v for k,v in enumerate(p_list) if k < 10}
+    return {str(k): v for k, v in enumerate(p_list) if k < 10}
 
 
 class A2pcej:
     alphabet_en = [
         'Alfa', 'Bravo', 'Charlie', 'Delta', 'Echo', 'Foxtrot', 'Golf',
-        'Hotel','India','Juliett', 'Kilo', 'Lima', 'Mike', 'November',
+        'Hotel', 'India', 'Juliett', 'Kilo', 'Lima', 'Mike', 'November',
         'Oscar', 'Papa', 'Quebec', 'Romeo', 'Sierra', 'Tango', 'Uniform',
         'Victor', 'Whiskey', 'Xray', 'Yankee', 'Zulu'
     ]
@@ -25,12 +25,12 @@ class A2pcej:
         'ヴィー', 'ダブリュー', 'エクス', 'ワイ', 'ゼット',
     ]
     number_en = [
-        "zero", "one", "two", "three", "four", "five",
-        "six", "seven", "eight", "nine",
+        'zero', 'one', 'two', 'three', 'four', 'five',
+        'six', 'seven', 'eight', 'nine',
     ]
     number_ja = [
-        "ゼロ", "イチ", "ニイ", "サン", "ヨン", "ゴウ",
-        "ロク", "シチ", "ハチ", "キュウ",
+        'ゼロ', 'イチ', 'ニイ', 'サン', 'ヨン', 'ゴウ',
+        'ロク', 'シチ', 'ハチ', 'キュウ',
     ]
 
     phonetics = {
