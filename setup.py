@@ -26,7 +26,7 @@ setup(
     long_description=long_description,
     url='https://github.com/kacchan822/a2pcej',
     author='Katsuya SAITO',
-    author_email='hellow@hellow.skatsuya.com',
+    author_email='hello@skatsuya.com',
     license='MIT',
     classifiers=[
                     'Development Status :: 3 - Alpha',
