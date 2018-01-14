@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 
 def make_alphabet_dict(p_list):
-    return {chr(65 + k): v for k, v in enumerate(p_list) if k < 25}
+    return {chr(65 + k): v for k, v in enumerate(p_list) if k < 26}
 
 
 def make_num_dict(p_list):
