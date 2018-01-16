@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 import unittest
 
-from a2pcej.phonetics import A2pcej
+from a2pcej.phonetics import Phonetics
 
 
 class TestPhonetics(unittest.TestCase):
@@ -12,8 +12,8 @@ class TestPhonetics(unittest.TestCase):
         """ test method for phonetics """
         langs = ['en', 'ja']
         for lang in langs:
-            alphabet_dict = A2pcej.phonetics['alphabet_'+lang]
-            number_dict = A2pcej.phonetics['number_'+lang]
+            alphabet_dict = Phonetics().get_phonetics(lang)['alphabet']
+            number_dict = Phonetics().get_phonetics(lang)['number']
             self.assertTrue('A' in alphabet_dict.keys())
             self.assertTrue('Z' in  alphabet_dict.keys())
             self.assertTrue('0' in number_dict.keys())

@@ -1,32 +1,57 @@
 # -*- coding: utf-8 -*-
-"""convert Alphabet to Phonetic Code in English and Japanease."""
+""" Convert Alphabet to Phonetic Code in English and Japanease."""
 from __future__ import absolute_import, unicode_literals
 from sys import version_info
-from .phonetics import A2pcej
+from .phonetics import Phonetics
 
 
-def _converter(phonetics, letters, delimiter, sign, num):
-    if version_info[0] == 2:
-        letters = letters.decode('utf-8')
-    phonetic_dict = A2pcej.phonetics[phonetics]
-    phonetic_num_dict = A2pcej.phonetics['number_' + phonetics.split('_')[1]]
-    converted_letters = []
-    for i in list(letters):
-        if i.upper() in phonetic_dict.keys():
-            i_phonetic = phonetic_dict[i.upper()]
-            if i.isupper():
-                i_phonetic += sign
-            converted_letters.append(i_phonetic)
-        elif (i.isdigit() and num):
-            converted_letters.append(phonetic_num_dict[i])
+class A2pcej:
+    """ A2pcej """
+    def __init__(self, lang=None, delimiter=None, sign=None, num=False):
+        self.lang = lang if lang else 'ja'
+        self.delimiter = delimiter if delimiter else '・'
+        self.sign = sign if sign else '（大文字）'
+        self.num = num
+        self.phonetics = Phonetics()
+        self.phonetic_dict = self.phonetics.get_phonetics(lang)
+
+    def __converter(self, letter):
+        letter = letter.decode('utf-8') if version_info[0] == 2 else letter
+        if letter.upper() in self.phonetic_dict['alphabet'].keys():
+            phonetic_code = self.phonetic_dict['alphabet'][letter.upper()]
+            if letter.isupper():
+                phonetic_code += self.sign
+        elif (letter.isdigit() and self.num):
+            phonetic_code = self.phonetic_dict['number'][letter]
         else:
-            converted_letters.append(i)
-    return delimiter.join(converted_letters)
+            phonetic_code = letter
+        return phonetic_code
+
+    def convert(self, letters):
+        """ convert """
+        converted_letters = []
+        for letter in letters:
+            converted_letters.append(self.__converter(letter))
+        return self.delimiter.join(converted_letters)
 
 
 def conv_al(letters, delimiter='-', sign='(CAPS)', num=False):
-    return _converter('alphabet_en', letters, delimiter, sign, num)
+    """ Convert Alphabet to Phonetic Code in English. """
+    converter = A2pcej(
+        lang='en',
+        delimiter=delimiter,
+        sign=sign,
+        num=num
+    )
+    return converter.convert(letters)
 
 
 def conv_ak(letters, delimiter='・', sign='（大文字）', num=False):
-    return _converter('alphabet_ja', letters, delimiter, sign, num)
+    """ Convert Alphabet to Phonetic Code in Japanease. """
+    converter = A2pcej(
+        lang='ja',
+        delimiter=delimiter,
+        sign=sign,
+        num=num
+    )
+    return converter.convert(letters)
