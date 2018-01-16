@@ -2,6 +2,7 @@ a2pcej
 ======
 [![Code Climate](https://codeclimate.com/github/kacchan822/a2pcej/badges/gpa.svg)](https://codeclimate.com/github/kacchan822/a2pcej)
 [![Issue Count](https://codeclimate.com/github/kacchan822/a2pcej/badges/issue_count.svg)](https://codeclimate.com/github/kacchan822/a2pcej)
+[![Coverage Status](https://coveralls.io/repos/github/kacchan822/a2pcej/badge.svg?branch=master)](https://coveralls.io/github/kacchan822/a2pcej?branch=master)
 
 
 __a2pcej__, convert Alphabet to Phonetic Code in English and Japanease.
