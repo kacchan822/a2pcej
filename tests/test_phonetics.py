@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
 import unittest
 
 from a2pcej.phonetics import A2pcej

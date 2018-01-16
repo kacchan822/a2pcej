@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
 import unittest
 
 from a2pcej import conv_ak, conv_al
