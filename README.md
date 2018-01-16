@@ -32,13 +32,13 @@ First of all, import module.
 Import module.
 >>> from a2pcej import *
 ```
-Convert 'exsamples' to Ponetic code in English.
+Convert 'examples' to Ponetic code in English.
 ```python
 >>> conv_al('examples')
 'Echo-Xray-Alfa-Mike-Papa-Lima-Echo-Sierra'
 ```
 
-Convert 'exsamples' to Ponetic code in Japanese Katakana.
+Convert 'examples' to Ponetic code in Japanese Katakana.
 ```python
 >>> conv_ak('examples')
 'イー・エクス・エイ・エム・ピー・エル・イー・エス'
@@ -56,7 +56,7 @@ Upper case lattters has (CAPS) or (大文字) sign (default).
 You can change delimiter and Upper case letters sign.
 ```python
 >>> conv_al('Examples003', delimiter=', ', sign='(CAPITAL)')
-'Echo(CAPITAL), Xray, Alfa, Mike, Papa, Lima, Echo, Sierra, 0, 0, 3,'
+'Echo(CAPITAL), Xray, Alfa, Mike, Papa, Lima, Echo, Sierra, 0, 0, 3'
 >>> conv_ak('Examples003', delimiter='／', sign='(大)')
 'イー(大)／エクス／エイ／エム／ピー／エル／イー／エス／0／0／3'
 ```

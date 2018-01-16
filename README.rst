@@ -1,7 +1,7 @@
 a2pcej
 ======
 
-|Code Climate| |Issue Count| |Coveralls|
+|Code Climate| |Issue Count| |Coverage Status|
 
 **a2pcej**, convert Alphabet to Phonetic Code in English and Japanease.
 
@@ -41,14 +41,14 @@ First of all, import module.
     Import module.
     >>> from a2pcej import *
 
-Convert 'exsamples' to Ponetic code in English.
+Convert 'examples' to Ponetic code in English.
 
 .. code:: python
 
     >>> conv_al('examples')
     'Echo-Xray-Alfa-Mike-Papa-Lima-Echo-Sierra'
 
-Convert 'exsamples' to Ponetic code in Japanese Katakana.
+Convert 'examples' to Ponetic code in Japanese Katakana.
 
 .. code:: python
 
@@ -70,7 +70,7 @@ You can change delimiter and Upper case letters sign.
 .. code:: python
 
     >>> conv_al('Examples003', delimiter=', ', sign='(CAPITAL)')
-    'Echo(CAPITAL), Xray, Alfa, Mike, Papa, Lima, Echo, Sierra, 0, 0, 3,'
+    'Echo(CAPITAL), Xray, Alfa, Mike, Papa, Lima, Echo, Sierra, 0, 0, 3'
     >>> conv_ak('Examples003', delimiter='／', sign='(大)')
     'イー(大)／エクス／エイ／エム／ピー／エル／イー／エス／0／0／3'
 
@@ -87,5 +87,5 @@ If you would like to convert numbers to phonetic code, set ``num=True``.
    :target: https://codeclimate.com/github/kacchan822/a2pcej
 .. |Issue Count| image:: https://codeclimate.com/github/kacchan822/a2pcej/badges/issue_count.svg
    :target: https://codeclimate.com/github/kacchan822/a2pcej
-.. |Coveralls| image:: https://coveralls.io/repos/github/kacchan822/a2pcej/badge.svg?branch=master
+.. |Coverage Status| image:: https://coveralls.io/repos/github/kacchan822/a2pcej/badge.svg?branch=master
    :target: https://coveralls.io/github/kacchan822/a2pcej?branch=master
