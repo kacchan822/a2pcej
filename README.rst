@@ -1,7 +1,7 @@
 a2pcej
 ======
 
-|Code Climate| |Issue Count| |Coverage Status|
+|Code Climate| |Issue Count| |Coverage Status| |Latest Version|
 
 **a2pcej**, convert Alphabet to Phonetic Code in English and Japanease.
 
@@ -89,3 +89,5 @@ If you would like to convert numbers to phonetic code, set ``num=True``.
    :target: https://codeclimate.com/github/kacchan822/a2pcej
 .. |Coverage Status| image:: https://coveralls.io/repos/github/kacchan822/a2pcej/badge.svg?branch=master
    :target: https://coveralls.io/github/kacchan822/a2pcej?branch=master
+.. |Latest Version| image:: https://img.shields.io/pypi/v/a2pcej.svg
+   :target: https://pypi.python.org/pypi/a2pcej
