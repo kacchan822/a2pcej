@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 import unittest
-import pytest  # Added for exception testing
 
 from a2pcej import conv_ak, conv_al
 from a2pcej.a2pcej import A2pcej  # Import A2pcej
