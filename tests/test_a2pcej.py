@@ -43,9 +43,6 @@ class TestA2pcejInit(unittest.TestCase):
 class TestCommands(unittest.TestCase):
     """ test commands """
 
-    # Existing tests for conv_al and conv_ak should remain here
-    # These tests indirectly cover the __converter__ method as well.
-
     def test_conv_al(self):
         """ test conv_al """
         vaild_values = [
