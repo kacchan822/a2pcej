@@ -19,7 +19,7 @@ class A2pcej:
         self.delimiter = delimiter if delimiter is not None else self.phonetic_dict['delimiter']
         self.sign = sign if sign is not None else self.phonetic_dict['sign']
 
-    def __converter__(self, letter):
+    def _converter(self, letter):
         if letter.upper() in self.phonetic_dict['alphabet'].keys():
             phonetic_code = self.phonetic_dict['alphabet'][letter.upper()]
             if letter.isupper():
