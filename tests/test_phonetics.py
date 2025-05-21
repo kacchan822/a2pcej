@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 import unittest
-import pytest  # Added for exception testing
-
 from a2pcej.phonetics import Phonetics
 
 
