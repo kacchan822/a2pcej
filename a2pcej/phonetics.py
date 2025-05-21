@@ -91,18 +91,38 @@ class Phonetics:
         ],
     }
 
+    DEFAULTS = {
+        'en': {
+            'delimiter': '-',
+            'sign': '(CAPS)',
+        },
+        'ja': {
+            'delimiter': '・',
+            'sign': '（大文字）',
+        },
+    }
+
     def get_phonetics(self, lang):
         """ create phonetic code list for lang """
+        if lang not in self.DEFAULTS:
+            raise KeyError(f"Language '{lang}' not found in DEFAULTS.")
+        defaults = self.DEFAULTS[lang]
         phonetics = {
             'alphabet': self.get_alphabet_dict(lang),
             'number': self.get_number_dict(lang),
+            'delimiter': defaults['delimiter'],
+            'sign': defaults['sign'],
         }
         return phonetics
 
     def get_alphabet_dict(self, lang):
-        phonetics = self.ALPHABET.get(lang)
+        if lang not in self.ALPHABET:
+            raise KeyError(f"Language '{lang}' not found in ALPHABET.")
+        phonetics = self.ALPHABET[lang]
         return {chr(65 + k): v for k, v in enumerate(phonetics) if k < 26}
 
     def get_number_dict(self, lang):
-        phonetics = self.NUMBER.get(lang)
+        if lang not in self.NUMBER:
+            raise KeyError(f"Language '{lang}' not found in NUMBER.")
+        phonetics = self.NUMBER[lang]
         return {str(k): v for k, v in enumerate(phonetics) if k < 10}

@@ -1,22 +1,25 @@
 # -*- coding: utf-8 -*-
 """ Convert Alphabet to Phonetic Code in English and Japanease."""
 from __future__ import absolute_import, unicode_literals
-from sys import version_info
 from .phonetics import Phonetics
 
 
 class A2pcej:
     """ A2pcej """
-    def __init__(self, lang=None, delimiter=None, sign=None, num=False):
-        self.lang = lang if lang else 'ja'
-        self.delimiter = delimiter if delimiter else '・'
-        self.sign = sign if sign else '（大文字）'
+    def __init__(self, lang='ja', delimiter=None, sign=None, num=False):
+        self.lang = lang
         self.num = num
         self.phonetics = Phonetics()
-        self.phonetic_dict = self.phonetics.get_phonetics(lang)
+        try:
+            # Ensure self.lang is used, not the potentially None 'lang' from init
+            self.phonetic_dict = self.phonetics.get_phonetics(self.lang) 
+        except KeyError:
+            raise ValueError(f"Language '{self.lang}' is not supported.")
+
+        self.delimiter = delimiter if delimiter is not None else self.phonetic_dict['delimiter']
+        self.sign = sign if sign is not None else self.phonetic_dict['sign']
 
     def __converter(self, letter):
-        letter = letter.decode('utf-8') if version_info[0] == 2 else letter
         if letter.upper() in self.phonetic_dict['alphabet'].keys():
             phonetic_code = self.phonetic_dict['alphabet'][letter.upper()]
             if letter.isupper():

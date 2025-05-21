@@ -3,6 +3,41 @@ from __future__ import unicode_literals
 import unittest
 
 from a2pcej import conv_ak, conv_al
+from a2pcej.a2pcej import A2pcej  # Import A2pcej
+
+
+class TestA2pcejInit(unittest.TestCase):
+    """Test A2pcej.__init__ method"""
+
+    def test_init_default_delimiter_sign(self):
+        """Test that delimiter and sign are set from language defaults if not provided."""
+        # Test with 'ja' (default lang)
+        a2pcej_ja = A2pcej()
+        self.assertEqual(a2pcej_ja.lang, 'ja')
+        self.assertEqual(a2pcej_ja.delimiter, '・')
+        self.assertEqual(a2pcej_ja.sign, '（大文字）')
+
+        # Test with 'en'
+        a2pcej_en = A2pcej(lang='en')
+        self.assertEqual(a2pcej_en.lang, 'en')
+        self.assertEqual(a2pcej_en.delimiter, '-')
+        self.assertEqual(a2pcej_en.sign, '(CAPS)')
+
+    def test_init_override_delimiter_sign(self):
+        """Test that provided delimiter and sign override language defaults."""
+        a2pcej_custom_ja = A2pcej(lang='ja', delimiter='/', sign='(大)')
+        self.assertEqual(a2pcej_custom_ja.delimiter, '/')
+        self.assertEqual(a2pcej_custom_ja.sign, '(大)')
+
+        a2pcej_custom_en = A2pcej(lang='en', delimiter='--', sign='[CAPS]')
+        self.assertEqual(a2pcej_custom_en.delimiter, '--')
+        self.assertEqual(a2pcej_custom_en.sign, '[CAPS]')
+
+    def test_init_unsupported_language(self):
+        """Test A2pcej instantiation raises ValueError for unsupported language."""
+        with self.assertRaises(ValueError) as excinfo:
+            A2pcej(lang='fr')
+        self.assertIn("Language 'fr' is not supported.", str(excinfo.exception))
 
 
 class TestCommands(unittest.TestCase):
