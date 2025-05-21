@@ -35,9 +35,9 @@ class TestA2pcejInit(unittest.TestCase):
 
     def test_init_unsupported_language(self):
         """Test A2pcej instantiation raises ValueError for unsupported language."""
-        with pytest.raises(ValueError) as excinfo:
+        with self.assertRaises(ValueError) as excinfo:
             A2pcej(lang='fr')
-        self.assertIn("Language 'fr' is not supported.", str(excinfo.value))
+        self.assertIn("Language 'fr' is not supported.", str(excinfo.exception))
 
 
 class TestCommands(unittest.TestCase):

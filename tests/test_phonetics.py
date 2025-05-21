@@ -40,18 +40,18 @@ class TestPhonetics(unittest.TestCase):  # unittest.TestCase can be kept or chan
 
     def test_get_phonetics_unsupported_language(self):
         """ Test get_phonetics raises KeyError for unsupported language """
-        with pytest.raises(KeyError) as excinfo:
+        with self.assertRaises(KeyError) as excinfo:
             self.phonetics.get_phonetics('fr')
-        self.assertIn("'fr' not found in DEFAULTS", str(excinfo.value))
+        self.assertIn("'fr' not found in DEFAULTS", str(excinfo.exception))
 
     def test_get_alphabet_dict_unsupported_language(self):
         """ Test get_alphabet_dict raises KeyError for unsupported language """
-        with pytest.raises(KeyError) as excinfo:
+        with self.assertRaises(KeyError) as excinfo:
             self.phonetics.get_alphabet_dict('fr')
-        self.assertIn("'fr' not found in ALPHABET", str(excinfo.value))
+        self.assertIn("'fr' not found in ALPHABET", str(excinfo.exception))
 
     def test_get_number_dict_unsupported_language(self):
         """ Test get_number_dict raises KeyError for unsupported language """
-        with pytest.raises(KeyError) as excinfo:
+        with self.assertRaises(KeyError) as excinfo:
             self.phonetics.get_number_dict('fr')
-        self.assertIn("'fr' not found in NUMBER", str(excinfo.value))
+        self.assertIn("'fr' not found in NUMBER", str(excinfo.exception))
