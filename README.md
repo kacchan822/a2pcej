@@ -6,7 +6,7 @@ a2pcej
 [![Latest Version](https://img.shields.io/pypi/v/a2pcej.svg)](https://pypi.python.org/pypi/a2pcej)
 
 
-__a2pcej__, convert Alphabet to Phonetic Code in English and Japanease.
+__a2pcej__, convert Alphabet to Phonetic Code in English and Japanese.
 
 This module convert each alphabet letters to phonetic code,
 and also convert each alphabet letterts to katakana.

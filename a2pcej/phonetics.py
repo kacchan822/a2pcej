@@ -1,4 +1,4 @@
-""" Phonetic Code in English and Japanease. """
+""" Phonetic Code in English and Japanese. """
 
 
 class Phonetics:

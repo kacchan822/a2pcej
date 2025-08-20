@@ -3,7 +3,7 @@ a2pcej
 
 |Code Climate| |Issue Count| |Coverage Status| |Latest Version|
 
-**a2pcej**, convert Alphabet to Phonetic Code in English and Japanease.
+**a2pcej**, convert Alphabet to Phonetic Code in English and Japanese.
 
 This module convert each alphabet letters to phonetic code, and also
 convert each alphabet letterts to katakana.
