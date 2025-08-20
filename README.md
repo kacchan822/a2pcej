@@ -18,13 +18,13 @@ letters is string.
 
 ```python
 def conv_al(letters, delimiter='-', sign='(CAPS)', num=False):
-    return <unicode>
+    return str
 ```
 #### conv_ak(letters, delimiter='・', upper_sign='（大文字）', num=False)
 letters is string.
 ```python
 def conv_ak(letters, delimiter='・', sign='（大文字）', num=False):
-    return <unicode>
+    return str
 ```
 
 ### Simple example of usage as below... (on Python3.5)

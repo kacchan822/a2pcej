@@ -19,7 +19,7 @@ letters is string.
 .. code:: python
 
     def conv_al(letters, delimiter='-', sign='(CAPS)', num=False):
-        return <unicode>
+        return str
 
 conv\_ak(letters, delimiter='・', upper\_sign='（大文字）', num=False)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -29,7 +29,7 @@ letters is string.
 .. code:: python
 
     def conv_ak(letters, delimiter='・', sign='（大文字）', num=False):
-        return <unicode>
+        return str
 
 Simple example of usage as below... (on Python3.5)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
