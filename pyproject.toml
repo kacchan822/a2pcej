@@ -1,10 +1,10 @@
 [build-system]
-requires = ["setuptools>=61.0", "wheel"]
+requires = ["setuptools>=61.0", "wheel", "setuptools_scm[toml]>=6.2"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "a2pcej"
-version = "0.2.3"
+dynamic = ["version"]
 description = "a2pcej, convert Alphabet to Phonetic Code in English and Japanese."
 readme = "README.md"
 requires-python = ">=3.8"
@@ -96,3 +96,6 @@ python_version = "3.8"
 warn_return_any = true
 warn_unused_configs = true
 disallow_untyped_defs = true
+
+[tool.setuptools_scm]
+write_to = "a2pcej/_version.py"

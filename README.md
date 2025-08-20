@@ -69,3 +69,55 @@ If you would like to convert numbers to phonetic code, set `num=True`.
 >>> conv_ak('Examples004', num=True)
 'イー（大文字）・エクス・エイ・エム・ピー・エル・イー・エス・ゼロ・ゼロ・ヨン'
 ```
+
+## Development and Release
+
+### Setting up for development
+
+```bash
+# Clone the repository
+git clone https://github.com/kacchan822/a2pcej.git
+cd a2pcej
+
+# Install in development mode
+pip install -e .[dev]
+
+# Run tests
+pytest tests/ -v
+
+# Format code
+black .
+isort .
+
+# Lint code
+flake8 .
+```
+
+### Release Process
+
+This project uses automated releases via GitHub Actions. To create a new release:
+
+1. Update the version information and commit your changes
+2. Create and push a tag:
+   ```bash
+   git tag v1.0.0  # Replace with your version
+   git push origin v1.0.0
+   ```
+3. GitHub Actions will automatically:
+   - Run tests across multiple Python versions
+   - Build the package
+   - Publish to PyPI
+
+### GitHub Actions Setup
+
+To enable automatic PyPI publishing, you need to set up authentication:
+
+#### Option 1: PyPI API Token (Traditional)
+1. Create an API token on PyPI
+2. Add it as `PYPI_API_TOKEN` in GitHub repository secrets
+
+#### Option 2: Trusted Publishing (Recommended)
+1. Configure Trusted Publishing on PyPI for this repository
+2. No secrets needed - uses OpenID Connect (OIDC)
+
+For more details, see the [PyPI documentation on Trusted Publishing](https://docs.pypi.org/trusted-publishers/).

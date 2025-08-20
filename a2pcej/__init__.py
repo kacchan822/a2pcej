@@ -8,7 +8,13 @@ import argparse
 from .a2pcej import A2pcej, conv_ak, conv_al
 from .phonetics import Phonetics
 
-__all__ = ['A2pcej', 'Phonetics', 'conv_al', 'conv_ak']
+try:
+    from ._version import __version__
+except ImportError:
+    # fallback for development without setuptools_scm
+    __version__ = "unknown"
+
+__all__ = ['A2pcej', 'Phonetics', 'conv_al', 'conv_ak', '__version__']
 
 
 def create_parser():
