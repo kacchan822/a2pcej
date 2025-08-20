@@ -9,7 +9,7 @@ a2pcej
 __a2pcej__, convert Alphabet to Phonetic Code in English and Japanese.
 
 This module convert each alphabet letters to phonetic code,
-and also convert each alphabet letterts to katakana.
+and also convert each alphabet letters to katakana.
 
 
 ### Functions
@@ -27,26 +27,26 @@ def conv_ak(letters, delimiter='・', sign='（大文字）', num=False):
     return str
 ```
 
-### Simple example of usage as below... (on Python3.5)
+### Simple example of usage
+
 First of all, import module.
 ```python
-Import module.
 >>> from a2pcej import *
 ```
-Convert 'examples' to Ponetic code in English.
+Convert 'examples' to Phonetic code in English.
 ```python
 >>> conv_al('examples')
 'Echo-Xray-Alfa-Mike-Papa-Lima-Echo-Sierra'
 ```
 
-Convert 'examples' to Ponetic code in Japanese Katakana.
+Convert 'examples' to Phonetic code in Japanese Katakana.
 ```python
 >>> conv_ak('examples')
 'イー・エクス・エイ・エム・ピー・エル・イー・エス'
 ```
 
 Non alphabet letters are not convert (default).  
-Upper case lattters has (CAPS) or (大文字) sign (default).
+Upper case letters has (CAPS) or (大文字) sign (default).
 ```python
 >>> conv_al('Examples002')
 'Echo(CAPS)-Xray-Alfa-Mike-Papa-Lima-Echo-Sierra-0-0-2'
