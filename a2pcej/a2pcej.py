@@ -1,6 +1,4 @@
-# -*- coding: utf-8 -*-
-""" Convert Alphabet to Phonetic Code in English and Japanease."""
-from __future__ import absolute_import, unicode_literals
+""" Convert Alphabet to Phonetic Code in English and Japanese."""
 from .phonetics import Phonetics
 
 
@@ -50,7 +48,7 @@ def conv_al(letters, delimiter='-', sign='(CAPS)', num=False):
 
 
 def conv_ak(letters, delimiter='・', sign='（大文字）', num=False):
-    """ Convert Alphabet to Phonetic Code in Japanease. """
+    """ Convert Alphabet to Phonetic Code in Japanese. """
     converter = A2pcej(
         lang='ja',
         delimiter=delimiter,
