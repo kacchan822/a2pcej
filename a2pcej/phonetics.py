@@ -1,6 +1,4 @@
-# -*- coding: utf-8 -*-
 """ Phonetic Code in English and Japanease. """
-from __future__ import unicode_literals
 
 
 class Phonetics:

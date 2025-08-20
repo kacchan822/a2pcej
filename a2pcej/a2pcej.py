@@ -1,6 +1,4 @@
-# -*- coding: utf-8 -*-
 """ Convert Alphabet to Phonetic Code in English and Japanease."""
-from __future__ import absolute_import, unicode_literals
 from .phonetics import Phonetics
 
 

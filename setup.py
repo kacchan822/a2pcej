@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """A setuptools based setup module.
 
 See:
@@ -39,16 +38,21 @@ setup(
                     'Natural Language :: English',
                     'Operating System :: POSIX',
                     'Programming Language :: Python',
-                    'Programming Language :: Python :: 2',
-                    'Programming Language :: Python :: 2.7',
                     'Programming Language :: Python :: 3',
-                    'Programming Language :: Python :: 3.5',
+                    'Programming Language :: Python :: 3.6',
+                    'Programming Language :: Python :: 3.7',
+                    'Programming Language :: Python :: 3.8',
+                    'Programming Language :: Python :: 3.9',
+                    'Programming Language :: Python :: 3.10',
+                    'Programming Language :: Python :: 3.11',
+                    'Programming Language :: Python :: 3.12',
                     'Topic :: Software Development',
                     'Topic :: Text Processing',
                     'Topic :: Utilities',
                     ],
     keywords='alphabet, katakana, phonetic code',
     packages=find_packages(exclude=['tests', ]),
+    # python_requires='>=3.6',
     install_requires=[],
     entry_points={
                     'console_scripts': ['a2pcej=a2pcej:main',
