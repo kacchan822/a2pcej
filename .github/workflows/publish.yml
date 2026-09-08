@@ -7,6 +7,8 @@ on:
 
 jobs:
   test:
+    permissions:
+      contents: read
     uses: ./.github/workflows/pytest.yml
     with:
       python-versions: '["3.9", "3.10", "3.11", "3.12", "3.13"]'
